@@ -2222,7 +2222,7 @@ local function setElementVisible(name, visible)
     end)
 end
 
-local Window = WindUI:CreateWindow({ Title = "Raelios", Icon = "chess-king", Author = "by Raelios", Transparent = true })
+local Window = WindUI:CreateWindow({ Title = "NOCTIS X", Icon = "chess-king", Author = "by Raeliosx", Transparent = true })
 Window.Name = GUI_NAMES.Main 
 Window:Tag({ Title = "v.1.0.0", Icon = "github", Color = Color3.fromHex("#30ff6a"), Radius = 0 })
 Window:SetToggleKey(Enum.KeyCode.H)
@@ -2256,7 +2256,7 @@ Button.AutoButtonColor = false
 Button.BorderSizePixel = 0
 
 -- TODO: ganti ID ini dengan image kamu
-Button.Image = "rbxassetid://103447151186068"
+Button.Image = "rbxassetid://138625636967786"
 Button.ImageTransparency = 0
 Button.ScaleType = Enum.ScaleType.Fit
 
@@ -2264,7 +2264,7 @@ Button.Parent = Gui
 
 -- Rounded
 local Corner = Instance.new("UICorner")
-Corner.CornerRadius = UDim.new(1, 0)
+Corner.CornerRadius = UDim.new(0, 6)
 Corner.Parent = Button
 
 -- Neon Border (white)
