@@ -1,8 +1,3 @@
---[[ 
-    FILE: fishing_Raelios_v3.1.lua (MOD Auto Favorite v4.0)
-    VERSION: 3.1 (Update: Auto Join Classic Event + Auto Favorite Inventory Based)
-]]
-
 -- =====================================================
 -- ðŸ§¹ BAGIAN 1: CLEANUP SYSTEM
 -- =====================================================
@@ -1997,7 +1992,7 @@ local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
 ---------------------------------------------------------------------
 -- CONFIG
 ---------------------------------------------------------------------
-local ICON_ID = "rbxassetid://130835920424032" -- GANTI dengan icon kamu
+local ICON_ID = "rbxassetid://103447151186068" -- GANTI dengan icon kamu
 
 ---------------------------------------------------------------------
 -- STATE
@@ -2227,9 +2222,9 @@ local function setElementVisible(name, visible)
     end)
 end
 
-local Window = WindUI:CreateWindow({ Title = "Raelios", Icon = "chess-king", Author = "by UQi", Transparent = true })
+local Window = WindUI:CreateWindow({ Title = "Raelios", Icon = "chess-king", Author = "by Raelios", Transparent = true })
 Window.Name = GUI_NAMES.Main 
-Window:Tag({ Title = "v.4.8.0", Icon = "github", Color = Color3.fromHex("#30ff6a"), Radius = 0 })
+Window:Tag({ Title = "v.1.0.0", Icon = "github", Color = Color3.fromHex("#30ff6a"), Radius = 0 })
 Window:SetToggleKey(Enum.KeyCode.H)
 Window:EditOpenButton({
     Enabled = false,
@@ -2442,10 +2437,10 @@ TabFishing:Dropdown(
     {
         Title = "Category Fishing",
         Desc = "Select Mode",
-        Values = {"Instant", "Blatan"},
+        Values = {"Instant", "Blatant"},
         Value = "Instant",
         Callback = function(option)
-            instant, superInstant = (option == "Instant"), (option == "Blatan")
+            instant, superInstant = (option == "Instant"), (option == "Blatant")
             setElementVisible("Delay Fishing", false)
             setElementVisible("Delay Catch", false)
             setElementVisible("Reset Delay", false)
@@ -2848,7 +2843,7 @@ sectionServer:Button({
         local p = game:GetService("Players").LocalPlayer
         
         WindUI:Notify({Title = "System", Content = "Rejoining...", Duration = 3})
-        local myScript = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/syauqiaditia/roblox-Raelios-fishit/refs/heads/main/Raelios.lua"))()'
+        local myScript = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/raeliosj/Fish-It/refs/heads/main/Raelios.lua"))()'
         if (syn and syn.queue_on_teleport) then
             syn.queue_on_teleport(myScript)
         elseif queue_on_teleport then
