@@ -1,10 +1,10 @@
 --[[ 
-    FILE: fishing_uqill_v3.1.lua (MOD Auto Favorite v4.0)
+    FILE: fishing_Raelios_v3.1.lua (MOD Auto Favorite v4.0)
     VERSION: 3.1 (Update: Auto Join Classic Event + Auto Favorite Inventory Based)
 ]]
 
 -- =====================================================
--- 🧹 BAGIAN 1: CLEANUP SYSTEM
+-- ðŸ§¹ BAGIAN 1: CLEANUP SYSTEM
 -- =====================================================
 if getgenv().fishingStart then
     getgenv().fishingStart = false
@@ -13,9 +13,9 @@ end
 
 local CoreGui = game:GetService("CoreGui")
 local GUI_NAMES = {
-    Main = "UQiLL_Fishing_UI",
-    Mobile = "UQiLL_Mobile_Button",
-    Coords = "UQiLL_Coords_HUD"
+    Main = "Raelios_Fishing_UI",
+    Mobile = "Raelios_Mobile_Button",
+    Coords = "Raelios_Coords_HUD"
 }
 
 for _, v in pairs(CoreGui:GetChildren()) do
@@ -25,7 +25,7 @@ for _, v in pairs(CoreGui:GetChildren()) do
 end
 
 for _, v in pairs(CoreGui:GetDescendants()) do
-    if v:IsA("TextLabel") and v.Text == "UQiLL" then
+    if v:IsA("TextLabel") and v.Text == "Raelios" then
         
         local container = v
         
@@ -52,7 +52,7 @@ end
 
 
 -- =====================================================
--- 🎣 BAGIAN 2: VARIABEL & REMOTE
+-- ðŸŽ£ BAGIAN 2: VARIABEL & REMOTE
 -- =====================================================
 getgenv().fishingStart = false
 local legit = false
@@ -109,7 +109,7 @@ local RunService = game:GetService("RunService")
 local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
 
 -- ---------------------------------------------------------------------
--- -- AUTO DISCO v13 — FINAL PRODUCTION VERSION
+-- -- AUTO DISCO v13 â€” FINAL PRODUCTION VERSION
 -- -- Clean, Efisien, Stabil, dan Terintegrasi dengan Event Asli (Replion)
 -- ---------------------------------------------------------------------
 
@@ -169,7 +169,7 @@ local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/rel
 --         savedPosition = hrp.Position
 --     end
 
---     print("[AutoDisco v13] Teleporting IN →", DISCO_POSITION)
+--     print("[AutoDisco v13] Teleporting IN â†’", DISCO_POSITION)
 
 --     SafeTeleport(DISCO_POSITION + HEIGHT_OFFSET)
 -- end
@@ -183,7 +183,7 @@ local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/rel
 --     eventActive = false
 
 --     if savedPosition then
---         print("[AutoDisco v13] Teleporting OUT →", savedPosition)
+--         print("[AutoDisco v13] Teleporting OUT â†’", savedPosition)
 --         SafeTeleport(savedPosition + HEIGHT_OFFSET)
 --     end
 
@@ -495,7 +495,7 @@ local function TeleportTo(targetPos)
 end
 
 -- ---------------------------------------------------------
--- -- AUTO WEATHER — ULTRA LIGHT (FINAL PATCH)
+-- -- AUTO WEATHER â€” ULTRA LIGHT (FINAL PATCH)
 -- ---------------------------------------------------------
 
 -- task.defer(function()
@@ -532,14 +532,14 @@ end
 --             local asJson = game:GetService("HttpService"):JSONEncode(current or {})
 
 --             if asJson ~= lastJson then
---                 warn("[SNIFF] WeatherMachine CHANGED →", current)
+--                 warn("[SNIFF] WeatherMachine CHANGED â†’", current)
 --                 lastJson = asJson
 --             end
 --         end
 --     end)
 -- end)
 -- ==========================================
--- AUTO WEATHER v4 — Ultra Light + Stable
+-- AUTO WEATHER v4 â€” Ultra Light + Stable
 -- ==========================================
 
 local RS = game:GetService("ReplicatedStorage")
@@ -620,11 +620,11 @@ function StopAutoWeather()
 end
 
 -- =====================================================
--- 💰 BAGIAN 4: AUTO SELL
+-- ðŸ’° BAGIAN 4: AUTO SELL
 -- =====================================================
 local function StartAutoSellLoop()
     task.spawn(function()
-        print("💰 Auto Sell: BACKGROUND MODE STARTED")
+        print("ðŸ’° Auto Sell: BACKGROUND MODE STARTED")
         while SettingsState.AutoSell.TimeActive do
             for i = 1, SettingsState.AutoSell.TimeInterval do
                 if not SettingsState.AutoSell.TimeActive then return end
@@ -638,7 +638,7 @@ local function StartAutoSellLoop()
 end
 
 -- =====================================================
--- 🎣 BAGIAN 5: LOGIKA FISHING (TURBO)
+-- ðŸŽ£ BAGIAN 5: LOGIKA FISHING (TURBO)
 -- =====================================================
 
 local FishingBlocker = {
@@ -764,7 +764,7 @@ local function resetCharacter()
 end
 
 -- =====================================================
--- ⚙️ BAGIAN 6: FITUR LAIN
+-- âš™ï¸ BAGIAN 6: FITUR LAIN
 -- =====================================================
 local function ToggleFPSBoost(state)
     if state then
@@ -797,7 +797,7 @@ end
 
 ---------------------------------------------------------------------
 -- DISABLE DIVE & THROW VFX (FINAL FIX)
--- Reason: VFX depth is NOT flat → must scan ancestors
+-- Reason: VFX depth is NOT flat â†’ must scan ancestors
 ---------------------------------------------------------------------
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -961,7 +961,7 @@ local function ToggleWaterWalk(state)
         WATER_Y_LEVEL = DetectWaterLevel(hrp)
 
         local platform = Instance.new("Part")
-        platform.Name = "UQiLL_WaterPlatform"
+        platform.Name = "Raelios_WaterPlatform"
         platform.Size = Vector3.new(18, 1, 18)
         platform.Anchored = true
         platform.CanCollide = true
@@ -1041,7 +1041,7 @@ local function ToggleAnims(state)
 end
 
 -- ============================================================
--- 🎣 AUTO FAVORITE v7 — HYBRID WITH PROPER ON/OFF CONTROL
+-- ðŸŽ£ AUTO FAVORITE v7 â€” HYBRID WITH PROPER ON/OFF CONTROL
 -- ============================================================
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -1153,7 +1153,7 @@ local function StartAutoFavorite()
     newFishConnection = ObtainedNewFish.OnClientEvent:Connect(function(...)
         if not SettingsState.AutoFavorite.Active then return end
 
-        warn("[AFv7] New fish obtained → scanning...")
+        warn("[AFv7] New fish obtained â†’ scanning...")
 
         task.defer(function()
             local inv = Data:Get("Inventory")
@@ -1207,7 +1207,7 @@ local function SetSelectedRarities(list)
 end
 
 -- =====================================================
--- 🌌 BAGIAN 7: TELEPORT UTILS
+-- ðŸŒŒ BAGIAN 7: TELEPORT UTILS
 -- =====================================================
 local function TeleportToMegalodon()
     local ringsFolder = Workspace:FindFirstChild("!!! MENU RINGS")
@@ -1273,7 +1273,7 @@ for name, _ in pairs(Waypoints) do table.insert(zoneNames, name) end
 table.sort(zoneNames)
 
 -- =====================================================
--- 🎭 NAME SPOOFER (OVERHEAD HEADER BASED)
+-- ðŸŽ­ NAME SPOOFER (OVERHEAD HEADER BASED)
 -- =====================================================
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
@@ -1530,7 +1530,7 @@ do
 end
 
 -- -- =====================================================
--- -- 🎣 HOLY TRIDENT FULL ANIMATION OVERRIDE (NO CONFLICT)
+-- -- ðŸŽ£ HOLY TRIDENT FULL ANIMATION OVERRIDE (NO CONFLICT)
 -- -- Replace ALL animations with Holy Trident set
 -- -- =====================================================
 
@@ -1607,7 +1607,7 @@ end
 
 
 ---------------------------------------------------------------------
--- 🎣 FISH WEBHOOK LOGGER (FINAL - STATIC RARITY SOURCE)
+-- ðŸŽ£ FISH WEBHOOK LOGGER (FINAL - STATIC RARITY SOURCE)
 ---------------------------------------------------------------------
 
 -------------------------------------------------------
@@ -1672,7 +1672,7 @@ local RARITY_MAP = {
 }
 
 -------------------------------------------------------
--- NAME → TIER (UI)
+-- NAME â†’ TIER (UI)
 -------------------------------------------------------
 local RARITY_NAME_TO_TIER = {
 	Common = 1,
@@ -1698,13 +1698,13 @@ local RARITY_COLOR = {
 }
 
 local RARITY_GRADIENT = {
-	[1] = "⬜",
-	[2] = "🟩",
-	[3] = "🟦",
-	[4] = "🟪",
-	[5] = "🟧",
-	[6] = "🟥",
-	[7] = "⬛",
+	[1] = "â¬œ",
+	[2] = "ðŸŸ©",
+	[3] = "ðŸŸ¦",
+	[4] = "ðŸŸª",
+	[5] = "ðŸŸ§",
+	[6] = "ðŸŸ¥",
+	[7] = "â¬›",
 }
 
 -------------------------------------------------------
@@ -1829,10 +1829,10 @@ local function BuildFishPayload(player, fishId, weight, mutation)
 	if mutationText == nil then mutationText = "None" end
 
 	return {
-		username = "UQiLL",
+		username = "Raelios",
         avatar_url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmU4Nzs0XL0IjJK2U-7u2qqVEO9FnkQkzb3g&s",
 		embeds = {{
-			title = (RARITY_GRADIENT[tier] or "") .. " 🎣 Fish Obtained",
+			title = (RARITY_GRADIENT[tier] or "") .. " ðŸŽ£ Fish Obtained",
 			color = RARITY_COLOR[tier],
 			fields = {
 				{ name = "Player", value = player, inline = true },
@@ -1844,7 +1844,7 @@ local function BuildFishPayload(player, fishId, weight, mutation)
 			thumbnail = { url = IconCache[fishId] },
 			timestamp = os.date("!%Y-%m-%dT%H:%M:%SZ"),
             footer = {
-                text = "UQiLL",
+                text = "Raelios",
             },
 		}}
 	}
@@ -1961,7 +1961,7 @@ local function StartFishWebhook()
         -- [NEW] Send Activation Message with GIF
     task.spawn(function()
         SendWebhook({
-            username = "UQiLL",
+            username = "Raelios",
             avatar_url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmU4Nzs0XL0IjJK2U-7u2qqVEO9FnkQkzb3g&s",
             embeds = {{
                 title = "WHOOOP, **" .. LocalPlayer.Name .. "** activated Webhook",
@@ -1982,7 +1982,7 @@ local function StopFishWebhook()
 end
 
 ---------------------------------------------------------------------
--- 📊 UQiLL PERFORMANCE HUD (FPS | PING | MEMORY)
+-- ðŸ“Š Raelios PERFORMANCE HUD (FPS | PING | MEMORY)
 -- Draggable | Toggleable | Clean & Lightweight
 ---------------------------------------------------------------------
 
@@ -2013,7 +2013,7 @@ local HudState = {
 -- UI ROOT
 ---------------------------------------------------------------------
 local Gui = Instance.new("ScreenGui")
-Gui.Name = "UQiLL_PerformanceHUD"
+Gui.Name = "Raelios_PerformanceHUD"
 Gui.ResetOnSpawn = false
 Gui.Parent = PlayerGui
 Gui.Enabled = false
@@ -2049,7 +2049,7 @@ local Title = Instance.new("TextLabel")
 Title.Position = UDim2.fromOffset(36, 0)
 Title.Size = UDim2.new(1, -36, 1, 0)
 Title.BackgroundTransparency = 1
-Title.Text = "UQiLL Performance Monitoring"
+Title.Text = "Raelios Performance Monitoring"
 Title.Font = Enum.Font.GothamBold
 Title.TextSize = 13
 Title.TextXAlignment = Enum.TextXAlignment.Left
@@ -2200,7 +2200,7 @@ end
 
 
 -- =====================================================
--- 🎨 BAGIAN 8: WIND UI SETUP
+-- ðŸŽ¨ BAGIAN 8: WIND UI SETUP
 -- =====================================================
 local function setElementVisible(name, visible)
     task.spawn(function()
@@ -2227,7 +2227,7 @@ local function setElementVisible(name, visible)
     end)
 end
 
-local Window = WindUI:CreateWindow({ Title = "UQiLL", Icon = "chess-king", Author = "by UQi", Transparent = true })
+local Window = WindUI:CreateWindow({ Title = "Raelios", Icon = "chess-king", Author = "by UQi", Transparent = true })
 Window.Name = GUI_NAMES.Main 
 Window:Tag({ Title = "v.4.8.0", Icon = "github", Color = Color3.fromHex("#30ff6a"), Radius = 0 })
 Window:SetToggleKey(Enum.KeyCode.H)
@@ -2807,7 +2807,7 @@ sectionTPPlayer:Button({ Title = "Refresh Players", Desc = "Update list", Icon =
 
 local sectionCoordinateTools = TabTeleport:Section({ Title = "Coordinate Tools" })
 LivePosToggle = sectionCoordinateTools:Toggle({ Title = "Show Live Pos", Desc = "Click to show coordinates", Icon = "monitor", Value = false, Callback = function(state) TogglePosWatcher(state) end })
-sectionCoordinateTools:Button({ Title = "Copy Position", Desc = "Copy 'Vector3.new(...)'", Icon = "copy", Callback = function() local Char = Players.LocalPlayer.Character; if Char and Char:FindFirstChild("HumanoidRootPart") then local pos = Char.HumanoidRootPart.Position; local str = string.format("Vector3.new(%.0f, %.0f, %.0f)", pos.X, pos.Y, pos.Z); if setclipboard then setclipboard(str); WindUI:Notify({Title = "Copied!", Content = "Saved", Duration = 2}) else print("📍 COPIED: " .. str); WindUI:Notify({Title = "Error", Content = "Check F9", Duration = 2}) end end end })
+sectionCoordinateTools:Button({ Title = "Copy Position", Desc = "Copy 'Vector3.new(...)'", Icon = "copy", Callback = function() local Char = Players.LocalPlayer.Character; if Char and Char:FindFirstChild("HumanoidRootPart") then local pos = Char.HumanoidRootPart.Position; local str = string.format("Vector3.new(%.0f, %.0f, %.0f)", pos.X, pos.Y, pos.Z); if setclipboard then setclipboard(str); WindUI:Notify({Title = "Copied!", Content = "Saved", Duration = 2}) else print("ðŸ“ COPIED: " .. str); WindUI:Notify({Title = "Error", Content = "Check F9", Duration = 2}) end end end })
 
 
 -- [[ TAB 5: SETTINGS ]]
@@ -2848,7 +2848,7 @@ sectionServer:Button({
         local p = game:GetService("Players").LocalPlayer
         
         WindUI:Notify({Title = "System", Content = "Rejoining...", Duration = 3})
-        local myScript = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/syauqiaditia/roblox-uqill-fishit/refs/heads/main/uqill.lua"))()'
+        local myScript = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/syauqiaditia/roblox-Raelios-fishit/refs/heads/main/Raelios.lua"))()'
         if (syn and syn.queue_on_teleport) then
             syn.queue_on_teleport(myScript)
         elseif queue_on_teleport then
@@ -3163,4 +3163,4 @@ task.delay(1, function()
 end)
 
 task.spawn(StartAntiAFK)
-print("✅ Script v3.1 Loaded! (With AutoFavorite v4.0)")
+print("âœ… Script v3.1 Loaded! (With AutoFavorite v4.0)")
