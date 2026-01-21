@@ -1693,13 +1693,13 @@ local RARITY_COLOR = {
 }
 
 local RARITY_GRADIENT = {
-	[1] = "â¬œ",
-	[2] = "ðŸŸ©",
-	[3] = "ðŸŸ¦",
-	[4] = "ðŸŸª",
-	[5] = "ðŸŸ§",
-	[6] = "ðŸŸ¥",
-	[7] = "â¬›",
+	[1] = "Common",
+	[2] = "Uncommon",
+	[3] = "Rare",
+	[4] = "Epic",
+	[5] = "Legendary",
+	[6] = "Mythic",
+	[7] = "Secret",
 }
 
 -------------------------------------------------------
@@ -1957,10 +1957,10 @@ local function StartFishWebhook()
     task.spawn(function()
         SendWebhook({
             username = "RazuX HUB",
-            avatar_url = "https://cdn.discordapp.com/attachments/1452284334944813097/1463585801421062216/Gemini_Generated_Image_x4kcvsx4kcvsx4kc_1.png?ex=69725dff&is=69710c7f&hm=0e902c1914526b3d2f8f9362bf9822219fd79bddaecebc6101aa433cde577ebf",
+            avatar_url = "https://cdn.discordapp.com/attachments/1452284334944813097/1463579458161344758/Gemini_Generated_Image_5yvzl45yvzl45yvz.png?ex=69725816&is=69710696&hm=8a790083ac1fcb37bbba99d44ae5632b0d70cc138a306e4ebb832e96da8baf2c",
             embeds = {{
                 title = "WHOOOP, **" .. LocalPlayer.Name .. "** activated Webhook",
-                image = { url = "https://i.makeagif.com/media/3-13-2016/fgm1lc.gif" },
+                image = { url = "https://cdn.discordapp.com/attachments/1452284334944813097/1463585801421062216/Gemini_Generated_Image_x4kcvsx4kcvsx4kc_1.png?ex=69725dff&is=69710c7f&hm=0e902c1914526b3d2f8f9362bf9822219fd79bddaecebc6101aa433cde577ebf" },
                 color = 0x30ff6a -- Hex color matching the UI theme
             }}
         })
