@@ -1064,7 +1064,7 @@ for _, module in ipairs(ReplicatedStorage.Items:GetChildren()) do
 		end
 	end
 end
-warn("[AFv7] FishDB Loaded:", #FishDB)
+warn("FishDB Loaded:", #FishDB)
 
 local function GetTier(id)
 	return FishDB[id]
@@ -1089,7 +1089,7 @@ function SetSelectedRarities(list)
 		if tier then SelectedTier[tier] = true end
 	end
 
-	warn("[AFv7] Selected Tier Updated:", SelectedTier)
+	warn("Selected Tier Updated:", SelectedTier)
 end
 
 -------------------------------------------------------
@@ -1107,7 +1107,7 @@ local function FavoriteIfMatch(item)
 	local tier = GetTier(id)
 
 	if tier and SelectedTier[tier] and not fav then
-		warn("[AFv7] Favoriting:", uuid, "Tier:", tier)
+		warn("Favoriting:", uuid, "Tier:", tier)
 		pcall(function()
 			FavoriteItem:FireServer(uuid)
 		end)
@@ -1119,7 +1119,7 @@ end
 local function InitialScan()
 	local inv = Data:Get("Inventory")
 	if inv and inv.Items then
-		warn("[AFv7] InitialScan...")
+		warn("InitialScan...")
 		for _, item in pairs(inv.Items) do
 			FavoriteIfMatch(item)
 		end
@@ -1136,7 +1136,7 @@ local ObtainedNewFish = net["RE/ObtainedNewFishNotification"]
 
 local function StartAutoFavorite()
 	if SettingsState.AutoFavActive then return end
-	warn("[AFv7] Auto Favorite ENABLED")
+	warn("Auto Favorite ENABLED")
 
      -- FIX: RESET CACHE SETIAP DI-ON
     KnownUUID = {}
@@ -1148,7 +1148,7 @@ local function StartAutoFavorite()
     newFishConnection = ObtainedNewFish.OnClientEvent:Connect(function(...)
         if not SettingsState.AutoFavorite.Active then return end
 
-        warn("[AFv7] New fish obtained â†’ scanning...")
+        warn("New fish obtained â†’ scanning...")
 
         task.defer(function()
             local inv = Data:Get("Inventory")
@@ -1164,7 +1164,7 @@ end
 local function StopAutoFavorite()
 	if not AutoFavActive then return end
 	AutoFavActive = false
-	warn("[AFv7] Auto Favorite DISABLED")
+	warn("Auto Favorite DISABLED")
     if newFishConnection then
         newFishConnection:Disconnect()
         newFishConnection = nil
@@ -2044,7 +2044,7 @@ local Title = Instance.new("TextLabel")
 Title.Position = UDim2.fromOffset(36, 0)
 Title.Size = UDim2.new(1, -36, 1, 0)
 Title.BackgroundTransparency = 1
-Title.Text = "Raelios Performance Monitoring"
+Title.Text = "RazuX Performance Monitoring"
 Title.Font = Enum.Font.GothamBold
 Title.TextSize = 13
 Title.TextXAlignment = Enum.TextXAlignment.Left
