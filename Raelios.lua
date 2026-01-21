@@ -1693,13 +1693,13 @@ local RARITY_COLOR = {
 }
 
 local RARITY_GRADIENT = {
-	[1] = "Common",
-	[2] = "Uncommon",
-	[3] = "Rare",
-	[4] = "Epic",
-	[5] = "Legendary",
-	[6] = "Mythic",
-	[7] = "Secret",
+	[1] = "Common ",
+	[2] = "Uncommon ",
+	[3] = "Rare ",
+	[4] = "Epic ",
+	[5] = "Legendary ",
+	[6] = "Mythic ",
+	[7] = "Secret ",
 }
 
 -------------------------------------------------------
@@ -1827,7 +1827,7 @@ local function BuildFishPayload(player, fishId, weight, mutation)
 		username = "RazuX HUB",
         avatar_url = "https://cdn.discordapp.com/attachments/1452284334944813097/1463579458161344758/Gemini_Generated_Image_5yvzl45yvzl45yvz.png?ex=69725816&is=69710696&hm=8a790083ac1fcb37bbba99d44ae5632b0d70cc138a306e4ebb832e96da8baf2c",
 		embeds = {{
-			title = (RARITY_GRADIENT[tier] or "") .. "New Fish Obtained",
+			title = "New Fish Obtained",
 			color = RARITY_COLOR[tier],
 			fields = {
 				{ name = "Player", value = player, inline = true },
