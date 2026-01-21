@@ -2256,7 +2256,7 @@ Button.AutoButtonColor = false
 Button.BorderSizePixel = 0
 
 -- TODO: ganti ID ini dengan image kamu
-Button.Image = "rbxassetid://130835920424032"
+Button.Image = "rbxassetid://103447151186068"
 Button.ImageTransparency = 0
 Button.ScaleType = Enum.ScaleType.Fit
 
