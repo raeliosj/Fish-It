@@ -2016,7 +2016,7 @@ Gui.Enabled = false
 local Frame = Instance.new("Frame")
 Frame.Size = UDim2.fromOffset(240, 100)
 Frame.Position = HudState.StartPos
-Frame.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Frame.BackgroundColor3 = Color3.fromRGB(0, 120, 255)
 Frame.BackgroundTransparency = 0.12
 Frame.BorderSizePixel = 0
 Frame.Parent = Gui
@@ -2222,7 +2222,7 @@ local function setElementVisible(name, visible)
     end)
 end
 
-local Window = WindUI:CreateWindow({ Title = "RazuX", Icon = "chess-king", Author = "by Raeliosx", Transparent = true })
+local Window = WindUI:CreateWindow({ Title = "RazuX", Icon = "rbxassetid://76439720688347", Author = "by Raeliosx", Transparent = true })
 Window.Name = GUI_NAMES.Main 
 Window:Tag({ Title = "BETA", Icon = "github", Color = Color3.fromHex("#30ff6a"), Radius = 0 })
 Window:SetToggleKey(Enum.KeyCode.H)
