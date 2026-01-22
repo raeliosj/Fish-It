@@ -1992,7 +1992,8 @@ local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
 ---------------------------------------------------------------------
 -- CONFIG
 ---------------------------------------------------------------------
-local ICON_ID = "rbxassetid://138625636967786" -- GANTI dengan icon kamu
+local ICON_ID = "rbxassetid://76439720688347
+" -- GANTI dengan icon kamu
 
 ---------------------------------------------------------------------
 -- STATE
@@ -2222,7 +2223,7 @@ local function setElementVisible(name, visible)
     end)
 end
 
-local Window = WindUI:CreateWindow({ Title = "RazuX", Icon = "rbxassetid://76439720688347", Author = "by Raeliosx", Transparent = true })
+local Window = WindUI:CreateWindow({ Title = "RazuX", Icon = "rbxassetid://133239390289737", Author = "by raeliosx", Transparent = true })
 Window.Name = GUI_NAMES.Main 
 Window:Tag({ Title = "BETA", Icon = "github", Color = Color3.fromHex("#30ff6a"), Radius = 0 })
 Window:SetToggleKey(Enum.KeyCode.H)
