@@ -1992,7 +1992,7 @@ local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
 ---------------------------------------------------------------------
 -- CONFIG
 ---------------------------------------------------------------------
-local ICON_ID = "rbxassetid://138625636967786" -- GANTI dengan icon kamu
+local ICON_ID = "rbxassetid://111168218926687" -- GANTI dengan icon kamu
 
 ---------------------------------------------------------------------
 -- STATE
@@ -2256,7 +2256,7 @@ Button.AutoButtonColor = false
 Button.BorderSizePixel = 0
 
 -- TODO: ganti ID ini dengan image kamu
-Button.Image = "rbxassetid://87407742822427"
+Button.Image = "rbxassetid://111168218926687"
 Button.ImageTransparency = 0
 Button.ScaleType = Enum.ScaleType.Fit
 
