@@ -2256,8 +2256,8 @@ Button.AutoButtonColor = false
 Button.BorderSizePixel = 0
 
 -- TODO: ganti ID ini dengan image kamu
-Button.Image = "rbxassetid://138625636967786"
-Button.ImageTransparency = 0
+Button.Image = "rbxassetid://103447151186068"
+Button.ImageTransparency = 1
 Button.ScaleType = Enum.ScaleType.Fit
 
 Button.Parent = Gui
@@ -2878,7 +2878,7 @@ sectionOptimization:Button(
     }
 )
 sectionOptimization:Toggle(
-    {Title = "FPS Boost (Potato)", Icon = "monitor", Value = false, Callback = function(state)
+    {Title = "FPS Boost", Icon = "monitor", Value = false, Callback = function(state)
             ToggleFPSBoost(state)
         end}
 )
@@ -3158,4 +3158,4 @@ task.delay(1, function()
 end)
 
 task.spawn(StartAntiAFK)
-print("âœ… Script v3.1 Loaded! (With AutoFavorite v4.0)")
+print("Loading... RazuX HUB Scrpit Loaded!")
