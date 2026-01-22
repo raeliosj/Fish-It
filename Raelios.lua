@@ -2222,9 +2222,9 @@ local function setElementVisible(name, visible)
     end)
 end
 
-local Window = WindUI:CreateWindow({ Title = "RazuX", Icon = "rbxassetid://133239390289737", Author = "by Raeliosx", Transparent = false })
+local Window = WindUI:CreateWindow({ Title = "RazuX", Icon = "terminal", Author = "by Raeliosx", Transparent = true })
 Window.Name = GUI_NAMES.Main 
-Window:Tag({ Title = "BETA", Icon = "code", Color = Color3.fromHex("#007cff"), Radius = 0 })
+Window:Tag({ Title = "BETA", Color = Color3.fromHex("#007cff"), Radius = 0 })
 Window:SetToggleKey(Enum.KeyCode.H)
 Window:EditOpenButton({
     Enabled = false,
